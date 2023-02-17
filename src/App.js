@@ -3,7 +3,7 @@ import './App.css';
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
-import Intro from "./Scenes/test"
+import Intro from "./Scenes/Intro"
 import Tema_1_figuras from "./Scenes/Tema_1_Figuras"
 
 function App() {
