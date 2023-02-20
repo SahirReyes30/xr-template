@@ -11,9 +11,10 @@ import * as Materials_Module from "../Modules/Materials_Module";
 import * as Babylon_Components from "../Babylon_components"
 
 
-const onSceneReady = (e) => {
+const onSceneReady = (e = { engine: new BABYLON.Engine, scene: new BABYLON.Scene, canvas: new HTMLCanvasElement }) => {
 
   const { canvas, scene, engine } = e;
+
 
   Cameras_Module.FreeCameraDefault(canvas, scene);
 
@@ -37,8 +38,6 @@ const onSceneReady = (e) => {
   var localAxe1 = Babylon_Components.showLocalAxes(3,scene);
 
   localAxe1.parent = box;
-
-  
 
   scene.onBeforeRenderObservable.add(() => {
     if (box !== undefined) {
